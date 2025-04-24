@@ -1,18 +1,11 @@
 function Contact(){
     return(
         <>
-        
-                    <div className="col-lg-8">
-                      <form id="contact-form" action="" method="post">
-                        <div className="row">
-                          <div className="col-lg-12">
-                            <div className="section-heading">
-                              <h2>
-                                <em>Contact Us</em> 
-                              </h2>
-                            </div>
-                          </div>
-                          <div className="col-lg-6">
+        <div className="container3">
+            <div className="contact">
+            <h1>Contact Us</h1>
+            <form className="form">
+            
                             <fieldset>
                               <input
                                 type="text"
@@ -23,8 +16,8 @@ function Contact(){
                                 required
                               />
                             </fieldset>
-                          </div>
-                          <div className="col-lg-6">
+                         
+                          
                             <fieldset>
                               <input
                                 type="text"
@@ -35,8 +28,8 @@ function Contact(){
                                 required
                               />
                             </fieldset>
-                          </div>
-                          <div className="col-lg-6">
+                          
+                         
                             <fieldset>
                               <input
                                 type="email"
@@ -46,20 +39,8 @@ function Contact(){
                                 placeholder="Your E-mail..."
                                 required
                               />
-                            </fieldset>
-                          </div>
-                          <div className="col-lg-6">
-                            <fieldset>
-                              <input
-                                type="text"
-                                name="subject"
-                                id="subject"
-                                placeholder="Subject..."
-                                autoComplete="on"
-                              />
-                            </fieldset>
-                          </div>
-                          <div className="col-lg-12">
+                            </fieldset> 
+                            <div className="col-lg-12">
                             <fieldset>
                               <textarea
                                 name="message"
@@ -68,7 +49,7 @@ function Contact(){
                               ></textarea>
                             </fieldset>
                           </div>
-                          <div className="col-lg-12">
+                        
                             <fieldset>
                               <button
                                 type="submit"
@@ -78,38 +59,9 @@ function Contact(){
                                 Send Message Now
                               </button>
                             </fieldset>
-                          </div>
-                        </div>
-                      </form>
-                      <div className="more-info">
-                        <div className="row">
-                          <div className="col-lg-4">
-                            <div className="info-item">
-                              <i className="fa fa-phone"></i>
-                              <h4><a href="#">010-020-0340</a></h4>
-                            </div>
-                          </div>
-                          <div className="col-lg-4">
-                            <div className="info-item">
-                              <i className="fa fa-envelope"></i>
-                              <h4><a href="#">jalani@gmail.com</a></h4>
-                              <h4><a href="#">hello@company.com</a></h4>
-                            </div>
-                          </div>
-                          <div className="col-lg-4">
-                            <div className="info-item">
-                              <i className="fa fa-map-marker"></i>
-                              <h4>
-                                <a href="#">
-                                  Sunny Isles Beach, FL 33160, United States
-                                </a>
-                              </h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  
+            </form>
+        </div>
+        </div>           
         </>
     )
 }
