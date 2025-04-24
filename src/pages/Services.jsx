@@ -6,7 +6,8 @@
 function Services() {
   return (
     <>
-    <p>anytime we give the services from us </p>
+    <h1 className="about">Services</h1>
+    <p className="p1">anytime we give the services from us </p>
     {/* <section className="services">
       <h1>Our Services</h1>
       <div className="services-images">
