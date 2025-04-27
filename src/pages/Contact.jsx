@@ -1,66 +1,96 @@
-function Contact(){
-    return(
-        <>
-  <div className="container3">
-    <div className="contact">
-      <h1>Contact Us</h1>
-      <form className="form" onSubmit={(e) => e.preventDefault()}>
-        <fieldset>
+import React, { useState } from 'react';
+
+function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data Submitted:', formData);
+    // You can send formData to your server or API here
+
+    // Clear form after submit
+    setFormData({
+      name: '',
+      email: '',
+      password: '',
+      message: '',
+    });
+  };
+
+  return (
+    <div className='con'>
+    <div className='contact'>
+    <div style={{ maxWidth: '500px', margin: '0 auto', padding: '20px' }}>
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Name:</label><br />
           <input
             type="text"
             name="name"
-            id="name"
-            placeholder="Your Name..."
-            autoComplete="on"
+            value={formData.name}
+            onChange={handleChange}
             required
+            style={{ width: '100%', padding: '8px' }}
           />
-        </fieldset>
+        </div>
 
-        <fieldset>
-          <input
-            type="text"
-            name="surname"
-            id="surname"
-            placeholder="Your Surname..."
-            autoComplete="on"
-            required
-          />
-        </fieldset>
-
-        <fieldset>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Email:</label><br />
           <input
             type="email"
             name="email"
-            id="email"
-            pattern="[^ @]*@[^ @]*"
-            placeholder="Your E-mail..."
+            value={formData.email}
+            onChange={handleChange}
             required
+            style={{ width: '100%', padding: '8px' }}
           />
-        </fieldset>
+        </div>
 
-        <fieldset>
+        <div style={{ marginBottom: '10px' }}>
+          <label>Password:</label><br />
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+            style={{ width: '100%', padding: '8px' }}
+          />
+        </div>
+
+        <div style={{ marginBottom: '10px' }}>
+          <label>Message:</label><br />
           <textarea
             name="message"
-            id="message"
-            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
             required
-          ></textarea>
-        </fieldset>
+            style={{ width: '100%', padding: '8px', height: '100px' }}
+          />
+        </div>
 
-        <fieldset>
-          <button
-            type="submit"
-            id="form-submit"
-            className="orange-button"
-          >
-            Send Message Now
-          </button>
-        </fieldset>
+        <button type="submit" style={{ padding: '10px 20px' }}>
+          Submit
+        </button>
       </form>
     </div>
-  </div>
-</>
-
-    )
+    </div>
+    </div>
+  );
 }
-export default Contact
+
+export default ContactPage;

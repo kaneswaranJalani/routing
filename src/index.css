@@ -1,21 +1,23 @@
-.container{
+/* .container{
   background-color: rgb(9, 9, 60);
   color: aliceblue;
   display: flex;
   font-size: xx-large;
   margin: auto;
-}
+} */
 .nav{
   display: flex;
   color: #ffff;
 }
 .about{
-  font-size: xx-large;
+  font-size:400%;
   text-align: center;
 }
 .p1{
-  font-size: large;
+  font-size: xx-large;
   text-align: center;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .container3{
@@ -59,7 +61,7 @@ button{
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #333;
+  background-color: #636060;
   color: #fff;
 }
 
@@ -74,6 +76,7 @@ button{
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  color: #fff;
 }
 
 .navbar-links li a {
@@ -101,8 +104,38 @@ text-align: center;
 font-size: xx-large;
 }
 .abc{
-  margin-left: 600px;
+  margin-left: 180px;
+  width: 1500px;
+  height: 800px;
+  margin-bottom: 150px;
+  
 }
 .image{
-  margin-left: 600px;
+  margin-left: 100px;
+  width: 500px;
+  margin-bottom: 150px;
 }
+.para{
+  font-size: x-large;
+  width:auto;
+}
+.box{
+  border-width: 5px;
+  border-color: black;
+  border: solid;
+  width: 700px;
+  border-radius: 15px;
+  margin-left: 200px;
+}
+.contact{
+  border: solid;
+  width: 500px;
+  margin-left: 650px;
+  margin-top: 100px;
+  background-color: rgb(198, 201, 201);
+}
+/* .con{
+  background-image: url(assets/image/Spaces.jpeg);
+  
+  
+} */

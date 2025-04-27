@@ -1,8 +1,8 @@
-import homeimage from "../assets/image/happyclient-01.jpg"
+import homeimage from "../assets/image/Diva'ni _ Studio Incept.jpeg"
 function Home(){
     return(
         <>
-        <h2>This my web page</h2>
+        <h2>Wedding Dress Collection</h2>
         <img className="abc" src={homeimage} alt=""/>
         </>
     )
